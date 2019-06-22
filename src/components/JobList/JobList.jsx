@@ -1,9 +1,18 @@
 import React from 'react';
 
-const JobList = ({ jobs }) => {
+import './JobList.css';
+import JobItem from '../JobItem';
+
+const JobList = ({ jobs, totalJobs }) => {
+    const getJobItem = (jobs) => jobs.map((job, index) => {
+        return <JobItem key={index} job={job} />
+    });
     return (
-        <div>
-            <h4>XXX jobs found</h4>
+        <div className="job-list">
+            <div className="total-jobs">
+                <h4>{totalJobs ? `${totalJobs} jobs found`: `No jobs found, please do a search.`}</h4>
+            </div>
+            {getJobItem(jobs)}
         </div>
     );
 };
