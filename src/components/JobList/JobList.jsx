@@ -8,7 +8,7 @@ const JobList = ({ jobs, totalJobs }) => {
     });
     return (
         <div>
-            <h4>{totalJobs} jobs found</h4>
+            <h4>{totalJobs ? `${totalJobs} jobs found`: `No jobs found, please do a search.`}</h4>
             {getJobItem(jobs)}
         </div>
     );
