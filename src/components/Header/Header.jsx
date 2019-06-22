@@ -9,6 +9,7 @@ const Header = () => (
         <img src={Logo} width="120" alt="Bossjob" />
         <h3>Search for job title or company name</h3>
         <SearchBar />
+        <button className="btn">Filter results</button>
     </header>
 )
 

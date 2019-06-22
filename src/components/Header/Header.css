@@ -18,6 +18,23 @@ input[type=text] {
     border-bottom: 1px solid #000000;
 }
 
-input:focus {
+input:focus, button {
     outline: none !important;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #2478ea;
+    color: #2478ea;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
 }
