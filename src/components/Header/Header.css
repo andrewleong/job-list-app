@@ -1,3 +1,7 @@
+:root {
+    --main-theme-color: #2478ea;
+}
+
 .Header {
     padding: 10px 20px;
     border-bottom: 1px solid #d8d8d8;
@@ -7,6 +11,17 @@
 .Header h3 {
     font-size: 0.8em;
     color: gray;
+}
+
+.search-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    color: var(--main-theme-color);
+    padding: 0 10px;
+    cursor: pointer;
 }
 
 input[type=text] {
@@ -28,8 +43,8 @@ input:focus, button {
     font-weight: 700;
     padding: 10px;
     background: transparent;
-    border: 2px solid #2478ea;
-    color: #2478ea;
+    border: 2px solid var(--main-theme-color);
+    color: var(--main-theme-color);
     border-radius: 100px;
     cursor: pointer;
     text-decoration: none;
