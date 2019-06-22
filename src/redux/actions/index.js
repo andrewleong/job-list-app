@@ -29,9 +29,18 @@ export const setTotalJobs = (totalJobs) => {
     }
 };
 
+export const SET_LOADING = 'SET_LOADING';
+
+export const setLoading = (isLoading) => {
+    return {
+        type: SET_LOADING,
+        isLoading
+    }
+};
+
 export const actionGetJobList = (keywords) => {
     return async dispatch => {
-        // dispatch(startLoading());
+        dispatch(setLoading(true));
         try {
             const { data } = await getJobList(keywords);
             const {
@@ -44,7 +53,7 @@ export const actionGetJobList = (keywords) => {
         } catch (e){
             // dispatch(loginUserError(e))
         } finally {
-            // dispatch(stopLoading());
+            dispatch(setLoading(false));
         }
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { CylinderSpinLoader } from 'react-css-loaders';
 
 import './App.css';
 
@@ -16,10 +17,16 @@ class App extends Component {
         getJobList(keywords);
     }
     render() {
-        const { jobs, totalJobs } = this.props;
+        const { jobs, totalJobs, isLoading } = this.props;
         return (
             <div className="app">
                 <div className="app-wrapper">
+                    { isLoading &&
+                        <div className="loader-spinner">
+                            <div className="overlay"></div>
+                            <CylinderSpinLoader />
+                        </div>
+                    }
                     <Header
                         onSubmit={this.handleSearch}
                     />
@@ -34,11 +41,12 @@ class App extends Component {
 }
 
 const mapStateToProps = ({ job }) => {
-    const { keywords, jobs, totalJobs, } = job;
+    const { keywords, jobs, totalJobs, isLoading, } = job;
     return {
         keywords,
         jobs,
         totalJobs,
+        isLoading,
     }
 }
 
