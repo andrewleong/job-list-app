@@ -4,27 +4,40 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import Header from './components/Header';
+import JobList from './components/JobList';
+
+import {
+    actionGetJobList
+} from './redux/actions';
 
 class App extends Component {
+    handleSearch = () => {
+        const { keywords, getJobList } = this.props;
+        getJobList(keywords);
+    }
     render() {
         return (
             <div className="App">
                 <div className="App-Wrapper">
-                    <Header />
-                    <div style={{padding: '10px 20px'}}>
-
-                    </div>
+                    <Header
+                        onSubmit={this.handleSearch}
+                    />
+                    <JobList />
                 </div>
             </div>
         );
     }
 }
 
-const mapStateToProps = state => ({
-    ...state
-})
+const mapStateToProps = ({ job }) => {
+    const { keywords, } = job;
+    return {
+        keywords,
+    }
+}
 
 const mapDispatchToProps = dispatch => ({
+    getJobList: (keywords) => dispatch(actionGetJobList(keywords))
 
 })
 
