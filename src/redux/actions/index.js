@@ -20,13 +20,27 @@ export const setJobList = (jobs) => {
     }
 };
 
+export const SET_TOTAL_JOBS = 'SET_TOTAL_JOBS';
+
+export const setTotalJobs = (totalJobs) => {
+    return {
+        type: SET_TOTAL_JOBS,
+        totalJobs
+    }
+};
+
 export const actionGetJobList = (keywords) => {
     return async dispatch => {
         // dispatch(startLoading());
         try {
             const { data } = await getJobList(keywords);
-            const { jobs } = data;
-            dispatch(setJobList(jobs))
+            const {
+                jobs,
+                total_num,
+            } = data;
+
+            dispatch(setJobList(jobs));
+            dispatch(setTotalJobs(total_num))
         } catch (e){
             // dispatch(loginUserError(e))
         } finally {

@@ -1,6 +1,8 @@
 import React from 'react';
 
-const JobItem = (props) => {
+const JobItem = ({ job }) => {
+    // const {
+    // } = job;
     return (
         <div>
             <h4>item</h4>

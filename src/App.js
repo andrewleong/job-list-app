@@ -16,7 +16,7 @@ class App extends Component {
         getJobList(keywords);
     }
     render() {
-        const { jobs } = this.props;
+        const { jobs, totalJobs } = this.props;
         return (
             <div className="app">
                 <div className="app-wrapper">
@@ -25,6 +25,7 @@ class App extends Component {
                     />
                     <JobList
                         jobs={jobs}
+                        totalJobs={totalJobs}
                     />
                 </div>
             </div>
@@ -33,10 +34,11 @@ class App extends Component {
 }
 
 const mapStateToProps = ({ job }) => {
-    const { keywords, jobs } = job;
+    const { keywords, jobs, totalJobs, } = job;
     return {
         keywords,
         jobs,
+        totalJobs,
     }
 }
 
