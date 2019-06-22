@@ -16,6 +16,12 @@ class App extends Component {
         const { keywords, getJobList } = this.props;
         getJobList(keywords);
     }
+
+    componentDidMount(){
+        const { getJobList } = this.props;
+        getJobList();
+    }
+
     render() {
         const { jobs, totalJobs, isLoading } = this.props;
         return (

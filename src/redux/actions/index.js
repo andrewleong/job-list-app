@@ -51,7 +51,7 @@ export const actionGetJobList = (keywords) => {
             dispatch(setJobList(jobs));
             dispatch(setTotalJobs(total_num))
         } catch (e){
-            // dispatch(loginUserError(e))
+            alert("An error has occurred.")
         } finally {
             dispatch(setLoading(false));
         }
