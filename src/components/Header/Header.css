@@ -1,4 +1,65 @@
-.Header {
-  padding: 10px 20px;
-  border-bottom: 1px solid #d8d8d8;
+:root {
+    --main-theme-color: #2478ea;
+}
+
+.header {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.18);
+}
+
+.header h3 {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.img-wrapper {
+    padding: 10px 30px;
+}
+
+.search-wrapper {
+    border-top: 1px solid #d8d8d8;
+    padding: 10px 30px;
+    background-color: #f8f8f8;
+}
+
+.search-btn-wrapper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-btn {
+    color: var(--main-theme-color);
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+input:focus, button {
+    outline: none !important;
+}
+
+.filter-btn {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid var(--main-theme-color);
+    color: var(--main-theme-color);
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
 }
