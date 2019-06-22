@@ -16,13 +16,16 @@ class App extends Component {
         getJobList(keywords);
     }
     render() {
+        const { jobs } = this.props;
         return (
-            <div className="App">
-                <div className="App-Wrapper">
+            <div className="app">
+                <div className="app-wrapper">
                     <Header
                         onSubmit={this.handleSearch}
                     />
-                    <JobList />
+                    <JobList
+                        jobs={jobs}
+                    />
                 </div>
             </div>
         );
@@ -30,9 +33,10 @@ class App extends Component {
 }
 
 const mapStateToProps = ({ job }) => {
-    const { keywords, } = job;
+    const { keywords, jobs } = job;
     return {
         keywords,
+        jobs,
     }
 }
 
