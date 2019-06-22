@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './JobList.css';
 import JobItem from '../JobItem';
 
 const JobList = ({ jobs, totalJobs }) => {
@@ -7,8 +8,10 @@ const JobList = ({ jobs, totalJobs }) => {
         return <JobItem key={index} job={job} />
     });
     return (
-        <div>
-            <h4>{totalJobs ? `${totalJobs} jobs found`: `No jobs found, please do a search.`}</h4>
+        <div className="job-list">
+            <div className="total-jobs">
+                <h4>{totalJobs ? `${totalJobs} jobs found`: `No jobs found, please do a search.`}</h4>
+            </div>
             {getJobItem(jobs)}
         </div>
     );

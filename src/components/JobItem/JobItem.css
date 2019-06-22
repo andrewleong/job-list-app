@@ -41,3 +41,7 @@
 .bottom-row span {
     color: #c6c4c4;
 }
+
+.bottom-row > div {
+    max-width: 200px;
+}
