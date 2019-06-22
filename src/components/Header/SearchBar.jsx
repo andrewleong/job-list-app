@@ -6,6 +6,7 @@ const SearchBar = ({ onInputChange }) => {
             <input
                 type='text'
                 onChange={onInputChange}
+                placeholder='Type here'
             />
         </div>
     );

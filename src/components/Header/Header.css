@@ -2,18 +2,27 @@
     --main-theme-color: #2478ea;
 }
 
-.Header {
-    padding: 10px 20px;
-    border-bottom: 1px solid #d8d8d8;
-    background-color: #f9f9f9;
+.header {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.18);
 }
 
-.Header h3 {
+.header h3 {
     font-size: 0.8em;
     color: gray;
 }
 
-.search-btn-container {
+.img-wrapper {
+    padding: 10px 30px;
+}
+
+.search-wrapper {
+    border-top: 1px solid #d8d8d8;
+    padding: 10px 30px;
+    background-color: #f8f8f8;
+}
+
+.search-btn-wrapper {
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -25,19 +34,20 @@
 }
 
 input[type=text] {
-    /* background: transparent; */
-    background: yellow;
+    font-size: 1em;
+    background: transparent;
     border: none;
     width: 100%;
     margin: 10px 0;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #d8d8d8;
 }
 
 input:focus, button {
     outline: none !important;
 }
 
-.btn {
+.filter-btn {
+    margin: 10px 0;
     width: 100%;
     font-size: 1em;
     font-weight: 700;
