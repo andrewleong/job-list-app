@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SearchBar.css';
+
 const SearchBar = ({ onInputChange }) => {
     return (
         <div>

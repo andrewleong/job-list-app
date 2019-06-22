@@ -2,7 +2,7 @@ import React from 'react'
 import { FaSearch } from 'react-icons/fa';
 import Logo from '../../assets/images/Logo.svg';
 import './Header.css';
-import SearchBar from './SearchBarContainer';
+import SearchBar from '../SearchBar';
 
 const Header = ({ onSubmit }) => (
     <header className="header">

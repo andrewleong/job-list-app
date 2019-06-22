@@ -1,0 +1,12 @@
+input[type=text] {
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+input:focus, button {
+    outline: none !important;
+}
